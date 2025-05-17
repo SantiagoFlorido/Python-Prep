@@ -7,14 +7,15 @@
 
 # In[7]:
 
-
+num = 20
+print(num)
 
 
 # 2) Imprimir el tipo de dato de la constante 8.5
 
 # In[3]:
 
-
+type(8.5)
 
 
 
@@ -23,14 +24,14 @@
 # In[8]:
 
 
-
+type(num)
 
 
 # 4) Crear una variable que contenga tu nombre
 
 # In[2]:
 
-
+mi_nombre = 'David Santiago Florido'
 
 
 # 5) Crear una variable que contenga un número complejo
@@ -38,14 +39,14 @@
 # In[3]:
 
 
-
+n_complejo = 10 + 15j
 
 
 # 6) Mostrar el tipo de dato de la variable crada en el punto 5
 
 # In[4]:
 
-
+type(n_complejo)
 
 
 
@@ -62,14 +63,15 @@ pi = 3.1416
 # In[3]:
 
 
-
+var1 = 'True'
+var2 = True
 
 
 # 9) Imprimir el tipo de dato correspondientes a las variables creadas en el punto 8
 
 # In[5]:
 
-
+print('La variable 1 es de tipo ', type(var1), ' y la variable 2 es de tipo ', type(var2))
 
 
 
@@ -78,14 +80,16 @@ pi = 3.1416
 # In[1]:
 
 
-
+suma = 11.4 + 6
 
 
 # 11) Realizar una operación de suma de números complejos
 
 # In[2]:
 
-
+num1 = 1 + 10j
+num2 = 5 + 9j
+print(num1 + num2)
 
 
 
@@ -94,7 +98,8 @@ pi = 3.1416
 # In[4]:
 
 
-
+c = num1 + 1.61
+print(c)
 
 
 # 13) Realizar una operación de multiplicación
@@ -102,14 +107,14 @@ pi = 3.1416
 # In[5]:
 
 
-
+print(7 * 8)
 
 
 # 14) Mostrar el resultado de elevar 2 a la octava potencia
 
 # In[6]:
 
-
+print(2**8)
 
 
 # 15) Obtener el cociente de la división de 27 entre 4 en una variable y luego mostrarla
@@ -117,14 +122,15 @@ pi = 3.1416
 # In[8]:
 
 
-
+num1 = 27 / 4
+print(num1)
 
 
 # 16) De la división anterior solamente mostrar la parte entera
 
 # In[9]:
 
-
+print(27 // 4)
 
 
 
@@ -133,7 +139,7 @@ pi = 3.1416
 # In[1]:
 
 
-
+27 % 4
 
 
 # 18) Utilizando como operandos el número 4 y los resultados obtenidos en los puntos 16 y 17. Obtener 27 como resultado
@@ -141,7 +147,7 @@ pi = 3.1416
 # In[2]:
 
 
-
+6 * 4 + 3
 
 
 # 19) Utilizar el operador "+" en una operación donde intervengan solo variables alfanuméricas
@@ -149,7 +155,9 @@ pi = 3.1416
 # In[3]:
 
 
-
+var1 = 'Buenos '
+var2 = 'Aires'
+print(var1 + var2)
 
 
 # 20) Evaluar si "2" es igual a 2. ¿Por qué ocurre eso?
@@ -157,7 +165,7 @@ pi = 3.1416
 # In[4]:
 
 
-
+2 == '2'
 
 
 # 21) Utilizar las funciones de cambio de tipo de dato, para que la validación del punto 20 resulte verdadera
@@ -165,14 +173,14 @@ pi = 3.1416
 # In[11]:
 
 
-
+2 == int('2')
 
 
 # 22) ¿Por qué arroja error el siguiente cambio de tipo de datos? a = float('3,8')
 
 # In[12]:
 
-
+a = float('3.8')
 
 
 
@@ -181,7 +189,9 @@ pi = 3.1416
 # In[15]:
 
 
-
+num1 = -3
+num1 -= 1
+print(num1)
 
 
 # 24) Realizar la operacion 1 << 2 ¿Por qué da ese resultado? ¿Qué es el sistema de numeración binario?
@@ -189,14 +199,14 @@ pi = 3.1416
 # In[29]:
 
 
-
+1 << 2
 
 
 # 25) Realizar la operación 2 + '2' ¿Por qué no está permitido? ¿Si los dos operandos serían del mismo tipo, siempre arrojaría el mismo resultado?
 
 # In[23]:
 
-
+2 + int('2')
 
 
 
@@ -205,5 +215,9 @@ pi = 3.1416
 
 # In[30]:
 
+var1 = 'este texto se repite '
+var2 = 3
+print(var1 * var2 + str(var2) + ' veces')
 
 
+# %%

@@ -8,7 +8,13 @@
 # In[4]:
 
 
-
+a = 10
+if (a < 0):
+    print('La variable es menor a cero')
+elif (a > 0): 
+    print('La variable es mayor a cero')
+else:
+    print('La variable es igual a cero')
 
 
 # 2) Crear dos variables y un condicional que informe si son del mismo tipo de dato
@@ -16,7 +22,12 @@
 # In[5]:
 
 
-
+a = 2
+b = 'hola'
+if (type(a) == type(b)):
+    print('Las variables son del mismo tipo de dato')
+else:
+    print('Las variables son de tipos de dato diferentes')
 
 
 # 3) Para los valores enteros del 1 al 20, imprimir por pantalla si es par o impar
@@ -24,7 +35,13 @@
 # In[7]:
 
 
+#resuelto con bucle for
 
+for i in range(1, 21):
+    if i % 2 == 0:
+        print('El número ', str(i), ' es par')
+    else:
+        print('El número ', str(i), ' es impar')
 
 
 # 4) En un ciclo for mostrar para los valores entre 0 y 5 el resultado de elevarlo a la potencia igual a 3
@@ -32,14 +49,18 @@
 # In[9]:
 
 
-
+for i in range(0, 6):
+    print('Valor:', str(i), ' Elevado a la 3ra potencia:', str(i**3))
 
 
 # 5) Crear una variable que contenga un número entero y realizar un ciclo for la misma cantidad de ciclos
 
 # In[10]:
 
-
+n = 12
+for i in range(0, n):
+    pass
+print(i)
 
 
 
@@ -48,14 +69,30 @@
 # In[33]:
 
 
-
+n = 5
+if (type(n) == int):
+    if (n > 0):
+        factorial = n
+        while (n > 2):
+            n = n - 1
+            factorial = factorial * n
+        print('El factorial es', factorial)
+    else:
+        print('La variable no es mayor a cero')
+else:
+    print('La variable no es un entero')
 
 
 # 7) Crear un ciclo for dentro de un ciclo while
 
 # In[38]:
 
-
+n = 1
+while n < 5:
+    print('Ciclo while nro ' + str(n))  # Imprime el número del ciclo while
+    for i in range(1, n+1): # como la función range(a, b) genera una secuencia de números desde a hasta b-1. Para que el bucle for incluya el número n, usamos range(1, n+1) en lugar de range(1, n).
+        print('Ciclo for nro ' + str(i))  # Imprime el número del ciclo for
+    n += 1
 
 
 
@@ -64,21 +101,48 @@
 # In[3]:
 
 
-
+n = 5
+for i in range(1, n):
+    while(n < 5):
+        n -= 1
+        print('Ciclo while nro ' + str(n))
+        print('Ciclo for nro ' + str(i))
 
 
 # 9) Imprimir los números primos existentes entre 0 y 30
 
 # In[54]:
 
-
+tope_rango=30
+n = 0
+primo = True
+while (n < tope_rango):
+    for div in range(2, n):
+        if (n % div == 0):
+            primo = False
+    if (primo):
+        print(n)
+    else:
+        primo = True
+    n += 1
 
 
 # 10) ¿Se puede mejorar el proceso del punto 9? Utilizar las sentencias break y/ó continue para tal fin
 
 # In[55]:
 
-
+n = 0
+primo = True
+while (n < tope_rango):
+    for div in range(2, n):
+        if (n % div == 0):
+            primo = False
+            break
+    if (primo):
+        print(n)
+    else:
+        primo = True
+    n += 1
 
 
 
@@ -86,19 +150,32 @@
 
 # In[56]:
 
-
-
-
-# In[57]:
-
-
+ciclos_sin_break = 0
+n = 0
+primo = True
+while (n < tope_rango):
+    for div in range(2, n):
+        ciclos_sin_break += 1
+        if (n % div == 0):
+            primo = False
+    if (primo):
+        print(n)
+    else:
+        primo = True
+    n += 1
+print('Cantidad de ciclos: ' + str(ciclos_sin_break))
 
 
 # 12) Aplicando continue, armar un ciclo while que solo imprima los valores divisibles por 12, dentro del rango de números de 100 a 300
 
 # In[62]:
 
-
+n = 99
+while(n <= 300):
+    n += 1
+    if (n % 12 != 0):
+        continue
+    print(n, ' es divisible por 12')
 
 
 
@@ -106,12 +183,34 @@
 
 # In[73]:
 
-
+n = 1
+sigue = 1
+primo = True
+while (sigue == 1):
+    for div in range(2, n):
+        if (n % div == 0):
+            primo = False
+            break
+    if (primo):
+        print(n)
+        print('¿Desea encontrar el siguiente número primo?')
+        if (input() != '1'):
+            print('Se finaliza el proceso')
+            break
+    else:
+        primo = True
+    n += 1
 
 
 # 14) Crear un ciclo while que encuentre dentro del rango de 100 a 300 el primer número divisible por 3 y además múltiplo de 6
 
 # In[75]:
 
+n = 100
+while(n<=300):
+    if (n % 6 == 0):
+        print('El número es: ', str(n))
+        break
+    n += 1
 
 
